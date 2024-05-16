@@ -4,6 +4,7 @@ import Home from '@/views/Home/index.vue'
 import Selfpage from '@/views/Selfpage/index.vue';
 import Chat from '@/views/Chat/index.vue';
 import Choose from '@/views/Choose/index.vue';
+import VideoChat from '@/views/VideoChat/index.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -26,7 +27,6 @@ const router = createRouter({
       path: '/user',
       name: 'user',
       component: Selfpage,
-      //meta: { requiresAuth: true },
     },
 	//语音页面
 	{
@@ -40,6 +40,11 @@ const router = createRouter({
 	  component: Choose,
 	},
   {
+	  path: '/videochat',
+	  name: 'videochat',
+	  component: VideoChat,
+	},
+  {
     path: '/test',
     name: 'test',
     component: () => import('@/views/ScenesChat/index.vue'),
@@ -48,7 +53,7 @@ const router = createRouter({
     path: '/test2',
     name: 'test2',
     component: () => import('@/views/Test/index.vue'),
-  }
+  },
   ]
 })
 

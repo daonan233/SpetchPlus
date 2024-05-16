@@ -9,6 +9,7 @@
           <div class="left-links">
             <router-link to="/home" class="nav-link">首页&nbsp;</router-link>
             <router-link to="/user" class="nav-link">&nbsp;学习历史</router-link>
+            <router-link to="/videochat" class="nav-link">&nbsp;名师交流</router-link>
           </div>
           <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
           <div class="right-links">
@@ -55,11 +56,11 @@
 		      document.querySelector('body').setAttribute('style','margin:0;padding:0')
 		      next()
 		    },
-		/* mounted() {
+		mounted() {
 			    this.startWordAnimation(); // 在组件挂载后开始单词动画
-			  }, */
+			  },
 		methods: {
-			   /* startWordAnimation() {
+			    startWordAnimation() {
 			      setInterval(() => {
 			        // 随机选择两个单词进行显示
 			        const randomIndexes = this.getRandomIndexes(this.words.length);
@@ -81,7 +82,7 @@
 			        }
 			      }
 			      return indexes;
-			    }, */
+			    },
 			  },
 	}
 	

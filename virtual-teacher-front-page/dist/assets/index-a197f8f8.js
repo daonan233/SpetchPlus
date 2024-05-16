@@ -1,1 +1,0 @@
-import{P as n,c as s,w as d}from"./index-90d9632c.js";const a={__name:"index",setup(r){const e=n();setTimeout(()=>{e.clickedIndex=9},2e3);const o=s(()=>e.clickedIndex);return d(o,(t,c)=>{console.log("count changed from",c,"to",t)}),(t,c)=>null}};export{a as default};

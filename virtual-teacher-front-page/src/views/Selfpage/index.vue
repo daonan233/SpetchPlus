@@ -21,26 +21,26 @@ const history = ref({
 	[
 		{
 			id:"",
-			timestamp:"2023-08-31 03:39:39",
-		    sentences:19,
-			totalWords:85,
-			wrongWords:1,
+			timestamp:"2007-08-31 03:39:39",
+		    sentences:0,
+			totalWords:0,
+			wrongWords:0,
 			level:"A",
 		},{
 			id:"",
-			timestamp:"2023-12-30 03:09:21",
-		    sentences:10,
-			totalWords:43,
-			wrongWords:8,
-			level:"C",
+			timestamp:"2007-08-31 03:39:39",
+		    sentences:0,
+			totalWords:0,
+			wrongWords:0,
+			level:"A",
 		},
 		{
 			id:"",
-			timestamp:"2024-01-19 12:36:37",
-		    sentences:11,
-			totalWords:46,
-			wrongWords:3,
-			level:"B",
+			timestamp:"2007-08-31 03:39:39",
+		    sentences:0,
+			totalWords:0,
+			wrongWords:0,
+			level:"A",
 		},
 	]
 });
@@ -83,7 +83,7 @@ onBeforeMount(async () => {
 		 </div>
 		<div class = "InfoContainer">
 			<div class="list-container">
-			    <div class="list-item">总学习:3</div>
+			    <div class="list-item">总学习:10</div>
 			    <div class="list-item">总对话:124</div>
 			    <div class="list-item">总单词:66</div>
 				<div class="list-item">有误单词:81</div>
@@ -112,11 +112,11 @@ onBeforeMount(async () => {
 		    <el-table-column prop="totalWords" label="Total Words"></el-table-column>
 		    <el-table-column prop="wrongWords" label="Wrong Words"></el-table-column>
 		    <el-table-column prop="level" label="Level"></el-table-column>
-		   <!-- <el-table-column label="Action">
+		    <el-table-column label="Action">
 		      <template v-slot="{ row }">
 		        <el-button @click="handleRowClick(row)" type="text" icon="el-icon-arrow-right"></el-button>
 		      </template>
-		    </el-table-column> -->
+		    </el-table-column>
 		  </el-table>
 	</div>
 	</div>
