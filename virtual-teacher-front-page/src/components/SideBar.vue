@@ -17,7 +17,7 @@ defineProps({
 })
 </script>
 
-<style>
+<style scoped>
 /* 头像样式 */
 .myAvatar {
     position: relative;

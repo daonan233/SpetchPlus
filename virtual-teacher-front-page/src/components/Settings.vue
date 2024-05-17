@@ -1,6 +1,6 @@
 <template>
-  <SvgIcon
-    name="setting"
+  <img
+    src="@/assets/imgs/setting.png"
     size="32"
     :class="['setting-menu', isShow ? 'open-setting' : '']"
     color="#e5bc64"
@@ -11,27 +11,27 @@
     <div class="setting show-box" @click.stop="void 0" v-if="isShow">
       <span class="title">通话设置</span>
       <div class="item">
-        <span class="name">对方声音</span>
+        <span>对方声音</span>
         <input type="checkbox" v-model="userInfo.settings.remoteAudio" />
       </div>
       <div class="item">
-        <span class="name">本地声音</span>
+        <span >本地声音</span>
         <input type="checkbox" v-model="userInfo.settings.localAudio" />
       </div>
       <div class="item">
-        <span class="name">对方视频</span>
+        <span>对方视频</span>
         <input type="checkbox" v-model="userInfo.settings.remoteVideo" />
       </div>
       <div class="item">
-        <span class="name">本地视频</span>
+        <span >本地视频</span>
         <input type="checkbox" v-model="userInfo.settings.localVideo" />
       </div>
       <div class="item">
-        <span class="name">视频通话</span>
+        <span >视频通话</span>
         <input type="radio" name="radio" :value="SETTINGS_VIDEO.USER" v-model="userInfo.settings.video" />
       </div>
       <div class="item">
-        <span class="name">共享屏幕</span>
+        <span>共享屏幕</span>
         <input type="radio" name="radio" :value="SETTINGS_VIDEO.DISPLAY" v-model="userInfo.settings.video" />
       </div>
     </div>

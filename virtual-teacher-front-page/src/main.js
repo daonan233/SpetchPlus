@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
+import "./style.less";
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate';
 import ElementPlus from 'element-plus'
 import 'element-plus/theme-chalk/index.css'

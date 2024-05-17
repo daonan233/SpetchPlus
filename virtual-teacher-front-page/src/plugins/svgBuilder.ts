@@ -1,4 +1,5 @@
-import { readFileSync, readdirSync } from "fs";
+import { readFileSync, readdirSync } from 'fs';
+
 let idPerfix = "";
 const svgTitle = /<svg([^>+].*?)>/;
 const clearHeightWidth = /(width|height)="([^>+].*?)"/g;

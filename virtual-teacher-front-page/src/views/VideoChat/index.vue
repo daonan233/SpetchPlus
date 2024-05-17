@@ -1,4 +1,5 @@
 <template>
+  <NaviBar/>
   <div class="context">
     <UserList @callUser="onCallUser" :callState="callState" />
     <div class="right show-box">
@@ -40,6 +41,7 @@
 </template>
 <script setup lang="ts">
 import { ref, watch } from "vue";
+import NaviBar from "@/components/NaviBar.vue";
 import UserList from "@/components/UserList.vue";
 import SvgIcon from "@/components/SvgIcon.vue";
 import AppVideo from "@/components/AppVideo.vue";
@@ -277,14 +279,15 @@ async function sendOffer(toUser: string, callType: CALL_TYPE) {
 }
 </script>
 <style lang="less" scoped>
+body{ background-color:#eaeaea;}
 .context {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 90.8%;
   box-sizing: border-box;
   padding: 12px;
   display: flex;
   overflow: hidden;
-
+  background-color: #eaeaea;
   .right {
     flex: 1;
     position: relative;

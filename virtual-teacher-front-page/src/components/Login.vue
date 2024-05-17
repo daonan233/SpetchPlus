@@ -1,15 +1,15 @@
 <template>
   <Transition name="T_top_dow" appear>
     <div v-if="isClose" :class="['login', 'show-box', isError ? 'error' : '']">
-      <span class="title">登录</span>
-      <input placeholder="输入账号(1-4)" v-model="username" :class="isError ? 'input-error' : ''" />
-      <AppButton @click="login" class="login-btn">进入</AppButton>
+      <span class="title">名师一对一</span>
+      <input placeholder="请输入您的账号" v-model="username" :class="isError ? 'input-error' : ''" />
+      <AppButton @click="login" class="login-btn">开始学习</AppButton>
     </div>
   </Transition>
 </template>
 <script lang="ts" setup>
 import AppButton from "./AppButton.vue";
-import { showDiaLog } from "@/utils";
+import { showDiaLog } from "/src/utils";
 import { ref } from "vue";
 import { DIALOG_TYPE } from "@/enum";
 const $emit = defineEmits(["login"]);
@@ -19,7 +19,7 @@ let isClose = ref(true);
 function login() {
   if (isError.value) return;
   if (username.value.length <= 0 || username.value.length > 4) {
-    showDiaLog({ msg: "账号范围(1-4)", type: DIALOG_TYPE.WARNING });
+    showDiaLog({ msg: "请先输入您的账号！）", type: DIALOG_TYPE.WARNING });
     isError.value = true;
     setTimeout(() => {
       isError.value = false;
@@ -39,7 +39,7 @@ defineExpose({
 .login {
   position: fixed;
   z-index: 2001;
-  top: 40%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -47,13 +47,23 @@ defineExpose({
   align-items: center;
   padding: 22px 4%;
   box-sizing: border-box;
-  width: 320px;
-  background-color: white;
+  width: 450px;
+  height:300px;
+  background-image: url('/src/assets/imgs/sakiko.png'); 
+  background-size: cover;
+  background-repeat: no-repeat; 
+  background-position: center; 
+  img{
+	  opacity: 20%;
+  }
   .title {
-    margin-bottom: 12px;
+	margin-top: 23%;  
+	font-size: 30px;   
+    margin-bottom: 20px;
     font-weight: bold;
-    color: gainsboro;
-    font-size: 18px;
+    color: #8a5be2;
+	letter-spacing: 3px;
+	font-family: 'youyuan';
   }
   input {
     margin-bottom: 32px;
@@ -67,11 +77,9 @@ defineExpose({
   animation: error-show 0.5s;
 }
 .input-error {
-  // border: 1px solid @color-error;
-  border: 1px solid red;
+  border: 1px solid @color-error;
   &:focus {
-    // outline: 1px solid @color-error;
-    outline: 1px solid red;
+    outline: 1px solid @color-error;
   }
 }
 @keyframes error-show {

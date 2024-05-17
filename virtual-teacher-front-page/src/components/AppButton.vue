@@ -20,15 +20,13 @@ const props = withDefaults(defineProps<PropsType>(), {
 </script>
 <style lang="less" scoped>
 .app-btn {
-  // background-color: @color-theme;
-  background-color: green;
+  background-color: @color-theme;
   color: white;
   font-size: 14px;
   cursor: pointer;
   transition: all 0.22s;
   &:hover {
-    // background-color: @color-theme-o8;
-    background-color:rgba(223, 223, 143, 0.285);
+    background-color: @color-theme-o8;
   }
   &:active {
     transform: scale(0.9);

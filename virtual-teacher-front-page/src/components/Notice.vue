@@ -2,13 +2,12 @@
   <Transition name="notice">
     <div class="notice show-box" v-if="isShow">
       <div class="left">
-        <SvgIcon name="user" color="#67C23A" size="48px" />
-        <span>{{ username ? `${username}来电` : "未知用户" }}</span>
+        <img src ="@/assets/imgs/user.png" color="#67C23A" size="48px" />
+        <span>{{ username === '4'? `学生 ${username}来电` : `老师 ${username}来电` }}</span>
       </div>
       <div class="right">
-        <SvgIcon
-          name="close"
-          color="#fe6c6f"
+        <img
+          src ="@/assets/imgs/close1.png"
           size="48px"
           class="svg-call svg-close"
           @click="
@@ -16,9 +15,8 @@
             isShow = false;
           "
         />
-        <SvgIcon
-          name="close"
-          color="#67C23A"
+        <img
+		  src ="@/assets/imgs/close2.png"
           size="48px"
           class="svg-call"
           @click="

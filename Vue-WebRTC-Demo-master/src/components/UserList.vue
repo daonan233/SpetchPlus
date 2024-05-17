@@ -110,7 +110,7 @@ const props = withDefaults(defineProps<PropsType>(), {});
         display: flex;
         align-items: center;
         .name {
-          margin-left: 12px;
+          margin-left: 200px;
           font-weight: bold;
           color: gray;
         }

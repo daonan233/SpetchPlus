@@ -1,6 +1,6 @@
 <template>
-  <SvgIcon
-    name="menu"
+  <img
+    src ="@/assets/imgs/user/menu.png"
     size="22"
     :class="['mobile-menu', isOpen ? 'open-menu' : '']"
     color="#67c23a"
@@ -9,12 +9,14 @@
   />
   <div class="userlist-mask" @click="isOpen = false" v-if="isOpen"></div>
   <div :class="['user-list', 'show-box', isMobile ? 'mobile' : '', isOpen ? 'open-user' : '']">
-    <span class="title">用户列表</span>
+    <span class="title">当前学习列表</span>
     <div class="list">
       <div class="item show-box" v-for="item in userInfo.userList" :key="item.userId">
-        <div class="left">
-          <SvgIcon name="user" size="22" />
-          <span class="name">{{ item.username }}</span>
+        <div  style = "display:flex;align-items: center;">
+          <img src="@/assets/imgs/user.png" />
+            <p  style = "margin-bottom : 20px; margin-left:20px; font-family :'youyuan'" >
+              {{ item.username === "4" ? '学生 ' + item.username : '老师 ' + item.username }}
+            </p>
         </div>
         <AppButton
           @click="$emit('callUser', item.username)"
@@ -86,8 +88,7 @@ const props = withDefaults(defineProps<PropsType>(), {});
   .title {
     align-self: center;
     font-weight: bold;
-    // color: @color-theme;
-    color: green;
+    color: @color-theme;
     margin-bottom: 12px;
   }
   .list {
@@ -103,19 +104,14 @@ const props = withDefaults(defineProps<PropsType>(), {});
       box-sizing: border-box;
       .now {
         font-size: 12px;
-        // color: @color-success;
-        color: green;
+        color: @color-success;
         font-weight: bold;
         width: 10%;
       }
-      .left {
-        display: flex;
-        align-items: center;
-        .name {
-          margin-left: 12px;
+      .name {
+          margin-left:20px;
           font-weight: bold;
           color: gray;
-        }
       }
     }
   }
