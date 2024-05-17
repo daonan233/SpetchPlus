@@ -11,7 +11,7 @@
   <div :class="['user-list', 'show-box', isMobile ? 'mobile' : '', isOpen ? 'open-user' : '']">
     <span class="title">当前学习列表</span>
     <div class="list">
-      <div class="item show-box" v-for="item in userInfo.userList" :key="item.userId">
+      <div class="item show-box" style="background:white" v-for="item in userInfo.userList" :key="item.userId">
         <div  style = "display:flex;align-items: center;">
           <img src="@/assets/imgs/user.png" />
             <p  style = "margin-bottom : 20px; margin-left:20px; font-family :'youyuan'" >
